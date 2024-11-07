@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 일상 블로그</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>나의 일상 블로그</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#write">글쓰기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="posts">
+            <!-- 게시글들이 여기에 표시됩니다 -->
+        </section>
+
+        <section id="write-form" class="hidden">
+            <h2>새 글 작성</h2>
+            <form id="blog-form">
+                <select id="category" required>
+                    <option value="">카테고리 선택</option>
+                    <option value="daily">일상</option>
+                    <option value="travel">여행</option>
+                    <option value="food">맛집</option>
+                    <option value="hobby">취미</option>
+                </select>
+                <input type="text" id="title" placeholder="제목" required>
+                <div class="image-upload">
+                    <input type="file" id="image" accept="image/*">
+                    <div id="image-preview"></div>
+                </div>
+                <textarea id="content" placeholder="내용을 입력하세요" required></textarea>
+                <button type="submit">저장하기</button>
+            </form>
+        </section>
+
+        <section id="category-filter">
+            <h3>카테고리</h3>
+            <ul>
+                <li><a href="#" data-category="all">전체보기</a></li>
+                <li><a href="#" data-category="daily">일상</a></li>
+                <li><a href="#" data-category="travel">여행</a></li>
+                <li><a href="#" data-category="food">맛집</a></li>
+                <li><a href="#" data-category="hobby">취미</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 나의 일상 블로그</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
